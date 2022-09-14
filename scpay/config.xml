@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>scpay</name>
+    <displayName><![CDATA[ShareCommercePayment]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[We are digital payment platform strive to drive the market towards real digital payments and cashless market, connect agents, merchants and partners with the ease of our leading technologies and customizable modules.]]></description>
+    <author><![CDATA[Share Commerce Team]]></author><author_uri><![CDATA[https://github.com/share-commerce/Plugin.Prestashop.1.7.-]]></author_uri>
+    <tab><![CDATA[payments_gateways]]></tab>
+	<confirmUninstall><![CDATA[Are you sure you want to delete your details ?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

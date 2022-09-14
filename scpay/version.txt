@@ -1,0 +1,1 @@
+plugin for prestashop 1.7
