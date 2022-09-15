@@ -216,7 +216,7 @@ class SCPay extends PaymentModule {
 	{
 		$SCPAY_ENVIRONMENT = Configuration::get('SCPAY_ENVIRONMENT');
 		if( empty($SCPAY_ENVIRONMENT) )
-			$SCPAY_ENVIRONMENT = "Sandbox";
+			$SCPAY_ENVIRONMENT = 'Test';
 		
 		
 		$result = array(
