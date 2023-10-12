@@ -47,7 +47,7 @@ class SCPayPaymentModuleFrontController extends ModuleFrontController{
 		$data['SCSign'] = hash_hmac('sha256', $signstr, $this->module->SCPAY_MERCHANT_SKEY);
 
 		if ($this->module->SCPAY_ENVIRONMENT=='Test'){
-			$data['action'] = 'https://staging.payment.share-commerce.com/payment'; 
+			$data['action'] = 'https://stagingpayment.share-commerce.com/payment'; 
 		}else{
 			$data['action'] = 'https://payment.share-commerce.com/payment';
 		}
