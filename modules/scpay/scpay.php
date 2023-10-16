@@ -1,6 +1,6 @@
 <?php
 /**
-* Share Commerce Payment - Prestashop Plugin
+* Share Commerce - Prestashop Plugin
 *
 * @package Payment Method
 * @author ShareCommerce
@@ -18,7 +18,7 @@ class SCPay extends PaymentModule {
 	public function __construct() {
 		$this->name = 'scpay';
 		$this->tab = 'payments_gateways';
-		$this->version = '1.0.0';
+		$this->version = '1.0.1';
 		$this->author = 'ShareCommerce';
 		$this->author_uri = 'https://github.com/share-commerce/Plugin.Prestashop.1.7.-';
 		$this->controllers = array('payment', 'validation');
@@ -36,14 +36,14 @@ class SCPay extends PaymentModule {
             $this->SCPAY_ENVIRONMENT = $config['SCPAY_ENVIRONMENT'];
 
 		parent::__construct();
-		$this->displayName = 'Share Commerce Payment';
+		$this->displayName = 'Share Commerce';
 		$this->description = $this->l('We are digital payment platform strive to drive the market towards real digital payments and cashless market, connect agents, merchants and partners with the ease of our leading technologies and customizable modules.');
 		$this->confirmUninstall = $this->l('Are you sure you want to delete your details ?');
 
 		if(!count(Currency::checkPaymentCurrencies($this->id)))
 				$this->warning = $this->l('No currency set for this module');
 		if(!isset($this->SCPAY_MERCHANT_SKEY) || !isset($this->SCPAY_MERCHANT_ID))
-				$this->warning = $this->l('Your Share Commerce Payment account must be set correctly');
+				$this->warning = $this->l('Your Share Commerce account must be set correctly');
 		if(!isset($this->SCPAY_ENVIRONMENT))
 				$this->warning = $this->l('This plugin required an environment type selected.');
 	}
@@ -121,7 +121,7 @@ class SCPay extends PaymentModule {
 			return;
 		
 		$newOption = new PaymentOption();
-		$newOption->setCallToActionText($this->trans('Share Commerce Payment', array(), 'Modules.SCPay.Shop'));
+		$newOption->setCallToActionText($this->trans('Share Commerce', array(), 'Modules.SCPay.Shop'));
 		$newOption->setAction($this->context->link->getModuleLink($this->name, 'payment', array(), true));
 		
 		$payment_options = [
